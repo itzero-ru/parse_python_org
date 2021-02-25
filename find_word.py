@@ -1,8 +1,11 @@
 import re
 
 def get_big_word(content):
-
-    content = re.sub(r"\d+", "", content, flags=re.UNICODE).lower() # Убераем цифры и переводим всев нижний регистр
+    """Функция извлекает из строки самое длинное и часто слово
+    
+    - если есть несколько одинаковых позиций, то они так же выводятся
+    """
+    content = re.sub(r"\d+", "", content, flags=re.UNICODE).lower() # Убераем цифры и переводим все в нижний регистр
 
     if content.strip() == '': exit("Вы не передали текст")
 
